@@ -19,6 +19,10 @@ sched = BlockingScheduler()
 survey_prompt = confi['survey_prompt']
 phone_number = confi['phone_number']
 
+import sys
+from datetime import datetime
+import pytz
+
 print(">>> jobs.py is running", file=sys.stdout)
 print(">>> Current NY time:", datetime.now(pytz.timezone("America/New_York")), file=sys.stdout)
 print(">>> Current UTC time:", datetime.utcnow(), file=sys.stdout)
