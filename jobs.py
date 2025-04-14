@@ -72,4 +72,9 @@ def send_message(day, hour, minute, code):
 for i in range(0,len(datetimes)):
     send_message(days[i], hours[i], mins[i], codes[i])
 
+
+print(">>> All scheduled jobs:")
+for job in sched.get_jobs():
+    print(f" - {job}", file=sys.stdout)
+
 sched.start()
