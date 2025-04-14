@@ -19,6 +19,10 @@ sched = BlockingScheduler()
 survey_prompt = confi['survey_prompt']
 phone_number = confi['phone_number']
 
+print(">>> jobs.py is running", file=sys.stdout)
+print(">>> Current NY time:", datetime.now(pytz.timezone("America/New_York")), file=sys.stdout)
+print(">>> Current UTC time:", datetime.utcnow(), file=sys.stdout)
+
 datetimes = ["mon 10:55", "wed 12:20", "fri 12:20", "tue 11:00", "thu 11:00", "tue 12:35", "thu 12:35", "tue 14:10", "thu 14:10"]
 
 split_list = [x.split(" ") for x in datetimes]
